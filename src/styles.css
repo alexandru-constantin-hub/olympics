@@ -1,1 +1,128 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #899af9, #303f9f);
+    background-attachement: fixed;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+}
+
+h2 {
+    color: #fff;
+    font-size: 4.5em;
+    padding: 30px 0;
+}
+
+.content {
+    position: absolute;
+    top: 220px;
+    left: 40px;
+}
+
+.text {
+    width: 340px;
+    margin: 0 auto;
+}
+
+.first-text {
+    width: 100px;
+    display: inline-block;
+}
+
+.second-text {
+    display: inline-block;
+}
+
+p {
+    color: #666;
+}
+
+a {
+    position: absolute;
+    display: block;
+    padding: 10px 20px;
+    background: #303f9f;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 20px;
+    left: 50%;
+    width: 100px;
+    margin-left: -80px;
+    top: 180px;
+}
+
+.container .card:nth-child(odd) .circle {
+    background-color: #ffaf00;
+}
+
+.container .card:nth-child(even) .circle {
+    background-color: #da2268;
+}
+
+.container .card:nth-child(3n+0) .circle {
+    background-color: #000000;
+}
+
+.container:hover .card {
+    filter: blur(20px);
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.container .card:hover {
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    margin: 30px 0 30px 0;
+    padding-top: 30px;
+    font-size: 1rem;
+    font-weight: 800;
+}
